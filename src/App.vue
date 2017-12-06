@@ -1,30 +1,26 @@
 <template>
   <div id="app">
-    <router-view/>
-    <top></top>
+    <app-header></app-header>
+    <div class="tpl-page-container tpl-page-header-fixed">
+        <app-menu></app-menu>
+        <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
-import Top from './components/Top.vue'
-import Menu from './components/Menu.vue'
+import AppHeader from './components/AppHeader.vue'
+import AppMenu from './components/AppMenu.vue'
 
 export default {
   // name: 'app',
   components: {
-    Top,
-    Menu
+    AppMenu,
+    AppHeader
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
