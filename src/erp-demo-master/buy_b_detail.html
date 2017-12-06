@@ -1,0 +1,437 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>武汉卓上</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="assets/i/ico.ico">
+    <meta name="apple-mobile-web-app-title" content="" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/echarts.min.js"></script>
+</head>
+
+<body data-type="index">
+<!-- 公共头部 -->
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <h2>武汉卓上ERP系统</h2>
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+        </div>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="tpl-header-list-user-nick">欢迎, admin &nbsp;&nbsp;</span><span class="am-icon-caret-down"></span><span class="tpl-header-list-user-ico"> <img src="assets/img/user01.png"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        
+                        <li><a href="set_a.html"><span class="am-icon-cog"></span> 设置</a></li>
+                        <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+                    </ul>
+                </li>
+                <li class="am-hide-sm-only">
+                    <a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span><span class="admin-fullText">开启全屏</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+<!-- 公共头部end -->
+<!-- 公共侧边栏 -->
+    <div class="tpl-page-container tpl-page-header-fixed">
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu omenu">
+                    <li class="tpl-left-nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="am-icon-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-shopping-cart"></i>
+                            <span>购货</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="buy_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>购货</span>
+                                </a>
+
+                                <a href="buy_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>购货退货</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-truck"></i>
+                            <span>销货</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="sale_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>销货</span>
+                                </a>
+
+                                <a href="sale_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>销货退货</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-cube"></i>
+                            <span>仓库</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="ck_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>调拨</span>
+                                </a>
+
+                                <a href="ck_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>盘点</span>
+                                </a>
+
+                                <a href="ck_c.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>其他入库</span>
+                                </a>
+
+                                <a href="ck_d.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>其他出库</span>
+                                </a>
+
+                                <a href="ck_e.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>成本调整</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-dollar"> </i>
+                            <span>&nbsp;&nbsp;资金</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="money_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>收款</span>
+                                </a>
+
+                                <a href="money_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>付款</span>
+                                </a>
+
+                                <a href="money_c.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>其他收入</span>
+                                </a>
+
+                                <a href="money_d.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>其他支出</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-table"></i>
+                            <span>报表</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="table_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>采购报表</span>
+                                </a>
+
+                                <a href="table_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>销售报表</span>
+                                </a>
+
+                                <a href="table_c.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>仓存报表</span>
+                                </a>
+
+                                <a href="table_d.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>资金报表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-cog"></i>
+                            <span>设置</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="set_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>账户设置</span>
+                                </a>
+
+                                <a href="set_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>商品管理</span>
+                                </a>
+
+                                <a href="set_c.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>供应商管理</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 公共侧边end -->
+
+        <div class="tpl-content-wrapper">
+            <ol class="am-breadcrumb">
+                <li><a href="index.html" class="am-icon-home">首页</a></li>
+                <li><a href="javascript:history.go(-1);location.reload()" >购货退货记录表</a></li>
+                <li class="am-active"> 购货退货单</li>
+            </ol>
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class=""></span> 购货退货单
+                    </div>
+                    <div class="tpl-portlet-input tpl-fz-ml">
+                        <div class="portlet-input input-small input-inline">
+                            <div class="input-icon right">
+                                <i class="am-icon-search"></i>
+                                <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tpl-block">
+                    <div class="am-g" style="font-size: 14px;">
+                        <div class="am-u-sm-12 am-u-md-3">
+                            <div class="am-form-group">
+                                <form action="">
+                                    <select data-am-selected="{btnSize: 'sm'}">
+                                      <option value="option1">选择供应商</option>
+                                      <option value="option2">供应商1</option>
+                                      <option value="option3">供应商2</option>
+                                      <option value="option3">供应商3</option>
+                                      <option value="option3">供应商4</option>
+                                      <option value="option3">供应商5</option>
+                                      <option value="option3">供应商6</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="am-u-sm-12 am-u-md-3">
+                            <form action="" class="am-form am-form-inline">
+                            <span>单据时间 :</span>
+                              <div class="am-form-group am-form-icon">
+                                <i class="am-icon-calendar"></i>
+                                <input type="date" class="am-form-field" placeholder="日期" style="font-size: 14px;height: 32px;">
+                              </div>
+                            </form>
+                        </div>
+                        <div class="am-u-sm-12 am-u-md-3">
+                            <span>单据编号 : CG201711021830013</span>
+                        </div>
+                        <div class="am-u-sm-12 am-u-md-3">
+                            <div class="am-btn-toolbar">
+                                <div class="am-btn-group am-btn-group-xs">
+                                    <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
+<!-- <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button> -->
+                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                </div>
+                            </div>
+                        </div>
+<!--                         <div class="am-u-sm-12 am-u-md-3">
+                            <div class="am-input-group am-input-group-sm">
+                                <input type="text" class="am-form-field">
+                                <span class="am-input-group-btn">
+            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>
+          </span>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="am-g otable">
+                        <div class="am-u-sm-12">
+                            <form class="am-form" style="background: #f1f1f1;border: 1px solid #e8e8e8">
+                                <table class="am-table am-table-striped am-table-hover table-main">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
+                                            <th class="table-id"></th>
+                                            <th class="table-title">商品</th>
+                                            <th class="table-date am-hide-sm-only">单位</th>
+                                            <th class="table-date am-hide-sm-only">仓库</th>
+                                            <th class="table-date am-hide-sm-only">数量</th>
+                                            <th class="table-date am-hide-sm-only">购货单价</th>
+                                            <th class="table-date am-hide-sm-only">折扣率</th>
+                                            <th class="table-date am-hide-sm-only">折扣额</th>
+                                            <th class="table-date am-hide-sm-only">购货金额</th>
+                                            <th class="table-set">操作</th>
+                                            <th class="table-date am-hide-sm-only">备注</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td style="width: 20px">{{data.id}}</td>
+                                            <td><input type="text" value="{{data.name}}"></td>
+                                            <td><input type="text" value="{{data.num}}"></td>
+                                            <td class="am-hide-sm-only"><input type="text" value="{{data.cc}}"></td>
+                                            <td class="am-hide-sm-only"><input type="text" value="{{data.num}}"></td>
+                                            <td class="am-hide-sm-only"><input type="text" value="{{data.price}}"></td>
+                                            <td class="am-hide-sm-only"><input type="text" value="{{data.disPoint}}"></td>
+                                            <td class="am-hide-sm-only"><input type="text" value="{{data.discount}}"></td>
+                                            <td class="am-hide-sm-only"><input type="text" value="{{data.buyPrice}}"></td>
+                                            <td>
+                                                <div class="am-btn-toolbar">
+                                                    <div class="am-btn-group am-btn-group-xs">
+                                                        <!-- <button style="height: 37px" class="am-btn am-btn-default am-btn-xs am-text-secondary table_edit"><span class="am-icon-pencil-square-o"></span></button> -->
+                                                        <!-- <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
+ -->                                                        <button style="height: 37px" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only table_delete"><span class="am-icon-trash-o"></span></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="am-hide-sm-only"><input type="text" value="{{data.msg}}" style="width: 120px"></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th><input type="checkbox"></th>
+                                            <th class="table-id"></th>
+                                            <th class="table-title"></th>
+                                            <th class="table-date am-hide-sm-only"> 合 计 </th>
+                                            <th class="table-date am-hide-sm-only"></th>
+                                            <th class="table-date am-hide-sm-only">0</th>
+                                            <th class="table-date am-hide-sm-only">0.0</th>
+                                            <th class="table-date am-hide-sm-only">0%</th>
+                                            <th class="table-date am-hide-sm-only">0%</th>
+                                            <th class="table-date am-hide-sm-only">0.0</th>
+                                            <th class="table-date am-hide-sm-only"></th>
+                                            <th rowspan="2" class="am-hide-sm-only"><input type="text" value="" style="width: 120px;border: 0"></th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <button type="button" class="am-btn am-btn-default am-btn-warning add"><span class="am-icon-archive"></span> 新增</button>
+
+                                <div class="am-cf">
+                                    <div class="" style="padding-left: 35%;margin-top: 100px;">
+                                        <ul class="am-pagination tpl-pagination">
+                                            <li class="am-disabled"><a href="#">«</a></li>
+                                            <li class="am-active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">»</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="am-g" style="font-size: 14px;text-align: left;padding:0 100px 40px 100px">
+                                    <form class="am-form-inline" role="form">
+                                      <div class="am-form-group am-u-md-3">
+                                        优惠率 :<input type="text" class="am-form-field" placeholder="">
+                                      </div>
+                                      <div class="am-form-group am-u-md-3">
+                                        优惠金额 :<input type="text" class="am-form-field" placeholder="">
+                                      </div>
+                                      <div class="am-form-group am-u-md-3">
+                                        优惠后金额 :<input type="text" class="am-form-field" placeholder="">
+                                      </div>
+                                      <div class="am-form-group am-u-md-3">
+                                        本次退款 :<input type="text" class="am-form-field" placeholder="">
+                                      </div>
+                                      <div class="am-form-group am-u-md-3">
+                                        本次欠款 :<input type="text" class="am-form-field" placeholder="">
+                                      </div>
+                                      <div class="am-form-group am-u-md-3">
+                                        结算账户 :
+                                          <select data-am-selected="{btnSize: 'sm'}">
+                                            <option value="option1">选择账户</option>
+                                            <option value="option2">a</option>
+                                            <option value="option3">b</option>
+                                          </select>
+                                      </div>
+                                      <div class="am-form-group am-u-md-3">
+                                        制单人 :<input type="text" class="am-form-field" placeholder="" value="{{admin}}">
+                                      </div>
+                                      <div class="am-form-group am-u-md-3">
+                                        
+                                      </div>
+
+                                    </form>
+                                </div>
+                            </form>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                <div class="tpl-alert"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        $('.omenu>li:nth-of-type(2)>ul').css("display","block")
+        $('.omenu>li>a').removeClass("active")
+        $('.omenu>li:nth-of-type(2)>a').addClass("active")
+        $('.omenu>li:nth-of-type(2)>a>i:last-of-type').addClass("tpl-left-nav-more-ico-rotate")
+    </script>
+</body>
+
+</html>

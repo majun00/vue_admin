@@ -7,10 +7,14 @@
 
 <script>
 import Top from './components/Top.vue'
+import Menu from './components/Menu.vue'
 
 export default {
   // name: 'app',
-  components: {Top}
+  components: {
+    Top,
+    Menu
+  }
 }
 </script>
 

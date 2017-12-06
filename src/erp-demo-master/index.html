@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>武汉卓上</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="assets/i/ico.ico">
+    <meta name="apple-mobile-web-app-title" content="" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/echarts.min.js"></script>
+    <script type="text/html" id="template-test">
+        {{each subjects as value i}}
+        <li>
+            <p>{{value.title}}: <span>{{value.collect_count}}</span></p>
+        </li>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="lmenu">
+       {{each root as value i}}
+            <li class="tpl-left-nav-item">
+                 {{if value.child }}
+                     <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                         <i class="{{value.icon}}"></i>
+                         <span>{{value.title}}</span>
+                         <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                         <ul class="tpl-left-nav-sub-menu">
+                                <li>
+                                     {{each value.child as cld ci}}
+                                      <a href="{{cld.url}}"><span>{{cld.title}}</span></a>
+                                     {{/each}}
+                                </li>
+                            </ul>
+                     </a>
+                 {{ else }}
+                     <a href="{{value.url}}" class="nav-link active">
+                         <i class="{{value.icon}}"></i>
+                         <span>{{value.title}}</span>
+                     </a>
+                 {{/if}}
+            </li>
+        {{/each}}
+    </script>
+
+</head>
+
+<body data-type="index">
+<!-- 公共头部 -->
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <h2>武汉卓上ERP系统</h2>
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+        </div>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="tpl-header-list-user-nick">欢迎, admin &nbsp;&nbsp;</span><span class="am-icon-caret-down"></span><span class="tpl-header-list-user-ico"> <img src="assets/img/user01.png"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        
+                        <li><a href="set_a.html"><span class="am-icon-cog"></span> 设置</a></li>
+                        <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+                    </ul>
+                </li>
+                <li class="am-hide-sm-only">
+                    <a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span><span class="admin-fullText">开启全屏</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+<!-- 公共头部end -->
+<!-- 公共侧边栏 -->
+    <div class="tpl-page-container tpl-page-header-fixed">
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu omenu">
+                    <li class="tpl-left-nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="am-icon-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-shopping-cart"></i>
+                            <span>购货</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="buy_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>购货</span>
+                                </a>
+
+                                <a href="buy_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>购货退货</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-truck"></i>
+                            <span>销货</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="sale_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>销货</span>
+                                </a>
+
+                                <a href="sale_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>销货退货</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-cube"></i>
+                            <span>仓库</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="ck_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>调拨</span>
+                                </a>
+
+                                <a href="ck_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>盘点</span>
+                                </a>
+
+                                <a href="ck_c.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>其他入库</span>
+                                </a>
+
+                                <a href="ck_d.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>其他出库</span>
+                                </a>
+
+                                <a href="ck_e.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>成本调整</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-dollar"> </i>
+                            <span>&nbsp;&nbsp;资金</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="money_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>收款</span>
+                                </a>
+
+                                <a href="money_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>付款</span>
+                                </a>
+
+                                <a href="money_c.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>其他收入</span>
+                                </a>
+
+                                <a href="money_d.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>其他支出</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-table"></i>
+                            <span>报表</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="table_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>采购报表</span>
+                                </a>
+
+                                <a href="table_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>销售报表</span>
+                                </a>
+
+                                <a href="table_c.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>仓存报表</span>
+                                </a>
+
+                                <a href="table_d.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>资金报表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-cog"></i>
+                            <span>设置</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="set_a.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>账户设置</span>
+                                </a>
+
+                                <a href="set_b.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>商品管理</span>
+                                </a>
+
+                                <a href="set_c.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>供应商管理</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 公共侧边end -->
+
+        <div class="tpl-content-wrapper">
+            <ol class="am-breadcrumb">
+                <li><a href="index.html" class="am-icon-home">首页</a></li>
+                <!-- <li class="am-active">内容</li> -->
+            </ol>
+            <div class="row">
+                <div class="am-u-md-12 am-u-sm-12 row-mb">
+                    <div class="tpl-portlet">
+
+                        <div class="tpl-portlet-title">
+                            <div class="tpl-portlet-input">
+                                <div class="portlet-input input-small input-inline">
+                                    <div class="input-icon right">
+                                        <i class="am-icon-search"></i>
+                                        <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="am-g">
+                          <div class="am-u-sm-10">
+                              <div class="am-g index_lis">
+                                <ul class="am-cf">
+                                    <!-- <li>
+                                        <p>库存总量: <span>1,398.00</span></p>
+                                        <p>库存成本: <span>1,398.00</span></p>
+                                    </li>
+                                    <li>
+                                        <p>现金: <span>1,398.00</span></p>
+                                        <p>银行存款: <span>1,398.00</span></p>
+                                    </li>
+                                    <li>
+                                        <p>客户存款: <span>1,398.00</span></p>
+                                        <p>供应商欠款: <span>1,398.00</span></p>
+                                    </li>
+                                    <li>
+                                        <p>销售收入(本月): <span>1,398.00</span></p>
+                                        <p>商品毛利(本月): <span>1,398.00</span></p>
+                                    </li>
+                                    <li>
+                                        <p>采购金额(本月): <span>1,398.00</span></p>
+                                        <p>商品肿瘤(本月): <span>1,398.00</span></p>
+                                    </li> -->
+                                </ul>
+                              </div>
+
+                                <div class="am-g index_imgs">
+                                  <div class="am-u-sm-3">
+                                    <a href="buy_a.html">
+                                        <img src="assets/img/1.png" alt="">
+                                        <p>采购入库</p>
+                                    </a>
+                                  </div>
+                                  <div class="am-u-sm-3">
+                                    <a href="sale_a.html">
+                                        <img src="assets/img/2.png" alt="">
+                                        <p>销货出库</p>
+                                    </a>
+                                  </div>
+                                  <div class="am-u-sm-3">
+                                    <a href="ck_a.html">
+                                        <img src="assets/img/3.png" alt="">
+                                        <p>仓库调拨</p>
+                                    </a>
+                                  </div>
+                                  <div class="am-u-sm-3">
+                                    <a href="ck_b.html">
+                                        <img src="assets/img/4.png" alt="">
+                                        <p>库存盘点</p>
+                                    </a>
+                                  </div>
+                                </div>
+                                <div class="am-g index_imgs">
+                                  <div class="am-u-sm-3">
+                                    <a href="ck_c.html">
+                                        <img src="assets/img/5.png" alt="">
+                                        <p>其他入库</p>
+                                    </a>
+                                  </div>
+                                  <div class="am-u-sm-3">
+                                    <a href="ck_d.html">
+                                        <img src="assets/img/6.png" alt="">
+                                        <p>其他进库</p>
+                                    </a>
+                                  </div>
+                                  <div class="am-u-sm-3">
+                                    <a href="ck_e.html">
+                                        <img src="assets/img/7.png" alt="">
+                                        <p>成本调整</p>
+                                    </a>
+                                  </div>
+                                  <div class="am-u-sm-3">
+                                    <a href="set_a.html">
+                                        <img src="assets/img/8.png" alt="">
+                                        <p>账户设置</p>
+                                    </a>
+                                  </div>
+                                </div>
+                          </div>
+                          <div class="am-u-sm-2">
+                                <ul class="am-nav">
+                                  <li class="am-active"><a href="javascript:;">快速查看</a></li>
+                                  <li><a href="set_b.html">商品管理</a></li>
+                                  <li><a href="set_c.html">供应商管理</a></li>
+                                  <li><a href="sale_a.html">销售记录</a></li>
+                                  <li><a href="buy_a.html">采购记录</a></li>
+                                  <li><a href="money_a.html">收款记录</a></li>
+                                  <li><a href="money_b.html">付款记录</a></li>
+                                  <li><a href="sale_a_detail.html">销售明细表</a></li>
+                                  <li><a href="buy_a_detail.html">采购明细表</a></li>
+                                  <li><a href="ck_a.html">调拨记录</a></li>
+                                </ul>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/template.js"></script>
+    <script src="assets/js/iscroll.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

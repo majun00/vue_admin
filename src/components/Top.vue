@@ -3,7 +3,7 @@
 	<header class="am-topbar am-topbar-inverse admin-header">
 	    <div class="am-topbar-brand">
 	        <a href="javascript:;" class="tpl-logo">
-	            <h2>米瑞科尔资源管理</h2>
+	            <h2>ERP管理系统</h2>
 	        </a>
 	    </div>
 	    <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
@@ -13,7 +13,7 @@
 	        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
 	            <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
 	                <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
-	                    <span class="tpl-header-list-user-nick">欢迎, admin &nbsp;&nbsp;</span><span class="am-icon-caret-down"></span><span class="tpl-header-list-user-ico"> <img src="src/assets/img/user01.png"></span>
+	                    <span class="tpl-header-list-user-nick">欢迎, {{username}} &nbsp;&nbsp;</span><span class="am-icon-caret-down"></span><span class="tpl-header-list-user-ico"> <img src="src/assets/img/user01.png"></span>
 	                </a>
 	                <ul class="am-dropdown-content">
 	                    <li><a href="set_a.html"><span class="am-icon-cog"></span> 设置</a></li>
@@ -32,9 +32,9 @@
 
 <script>
 export default {
-	data:{
-		return{
-			user:
+	data () {
+		return {
+			username: 'admin'
 		}
 	}
 }
