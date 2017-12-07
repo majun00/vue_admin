@@ -25,6 +25,11 @@ export default new Router({
     	path: '/buydetail',
     	name: 'BuyDetail',
     	component: BuyDetail
-    }
+    },
+    {
+    	path: '*',
+    	name: 'BuyDetail',
+    	component: BuyDetail
+    },
   ]
 })

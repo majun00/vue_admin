@@ -80,7 +80,7 @@
                                     </router-link>
                                   </div>
                                   <div class="am-u-sm-3">
-                                    <router-link to="/buy">ckd
+                                    <router-link to="/ckd">
                                         <img src="../assets/img/6.png" alt="">
                                         <p>其他进库</p>
                                     </router-link>
