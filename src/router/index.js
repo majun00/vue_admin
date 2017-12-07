@@ -17,19 +17,17 @@ export default new Router({
       path: '/buy',
       name: 'Buy',
       component: Buy,
-      children: [
-
-      ]
+      children: []
     },
     {
-    	path: '/buydetail',
-    	name: 'BuyDetail',
-    	component: BuyDetail
+      path: '/buydetail',
+      name: 'BuyDetail',
+      component: BuyDetail
     },
     {
-    	path: '*',
-    	name: 'BuyDetail',
-    	component: BuyDetail
+      path: '*',
+      name: 'BuyDetail',
+      component: BuyDetail
     },
   ]
 })
